@@ -73,11 +73,29 @@
 
     <script>
       $( document ).ready(function() {
-          Smooch.on('ready', function(){
-            Smooch.open();
-          });
+
+          // ip
+          // $("#ip_button").text("Your IP: "+userip); 
+
+          // $.getJSON('http://ipinfo.io', function(data){
+          //   console.log(data)
+          //   $("#ip_button").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
+          //   $("#ip_button").click(function(){
+          //     window.location.href="http://maps.google.com/maps?q="+data["loc"];
+          //   })
+          // })
 
           //chat
+          Smooch.on('ready', function(){
+            Smooch.open();
+            Smooch.sendMessage(userip);
+            Smooch.updateUser({
+                givenName: 'Updated',
+                surname: 'Name',
+            });
+
+          });
+
           Smooch.init({
             appToken: '6xysum4913o3cfreb9rik8dyb',
             customText: {
@@ -89,22 +107,9 @@
             }
           });
 
-          // ip
-          $("#ip_button").text("Your IP: "+userip); 
+          
 
-          $.getJSON('http://ipinfo.io', function(data){
-            console.log(data)
-            $("#ip_button").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
-            $("#ip_button").click(function(){
-              window.location.href="http://maps.google.com/maps?q="+data["loc"];
-            })
-          })
-
-
-          Smooch.updateUser({
-              appToken: '6xysum4913o3cfreb9rik8dyb',
-              givenName: userip,
-          });
+         
 
 
       })
