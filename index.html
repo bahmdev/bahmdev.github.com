@@ -73,6 +73,10 @@
 
     <script>
       $( document ).ready(function() {
+          Smooch.on('ready', function(){
+            Smooch.open();
+          });
+
           //chat
           Smooch.init({
             appToken: '6xysum4913o3cfreb9rik8dyb',
