@@ -16,6 +16,19 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/ionicons.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+
+     #sk-container #sk-wrapper .sk-msg {
+    background-color: #ff3333;
+    }
+    #sk-container #sk-wrapper .sk-msg::after {
+        border-left-color: #ff3333;
+    }
+      
+
+    </style>
+
+
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -56,23 +69,23 @@
   	<script src="assets/js/rAF.js"></script>
   	<script src="assets/js/demo-1.js"></script>
     <script src="https://cdn.smooch.io/smooch.min.js"></script>
-    <script> 
-      Smooch.init({
-        appToken: '6xysum4913o3cfreb9rik8dyb',
-        customText: {
-          headerText: 'Say Hi!',
-          inputPlaceholder: 'Type a message...',
-          sendButtonText: 'Send',
-          introText: 'Come on, you do not have to be shy,<br/> Ask me anything!',
-          settingsText: 'You can leave me your email so that I can get back to you if you want.'
-        }
-      });
-      Smooch.sendMessage(userip);
-    </script>
     <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 
     <script>
       $( document ).ready(function() {
+          //chat
+          Smooch.init({
+            appToken: '6xysum4913o3cfreb9rik8dyb',
+            customText: {
+              headerText: 'Say Hi!',
+              inputPlaceholder: 'Type a message...',
+              sendButtonText: 'Send',
+              introText: 'Come on, you do not have to be shy,<br/> Ask me anything!',
+              settingsText: 'You can leave me your email so that I can get back to you if you want.'
+            }
+          });
+
+          // ip
           $("#ip_button").text("Your IP: "+userip); 
 
           $.getJSON('http://ipinfo.io', function(data){
@@ -82,6 +95,11 @@
               window.location.href="http://maps.google.com/maps?q="+data["loc"];
             })
           })
+
+
+          Smooch.sendMessage("yo");
+          $(".sk-image").remove()
+          alert("hi")
 
 
       })
