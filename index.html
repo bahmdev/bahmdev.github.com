@@ -50,7 +50,7 @@
 				<h1 class="main-title">Bilal <span class="thin">Ahmad</span></h1>
 				<p class="main-tagline">
 					Trying to hack and build cool stuff.<br><br>
-					<button class="btn btn-conf btn-theme" id="ip_button"></button>
+					<button class="btn btn-conf btn-theme" id="chat"> Don't Click Me </button>
 				</p>
 			</div>
 		</div><!--content-->
@@ -74,25 +74,33 @@
     <script>
       $( document ).ready(function() {
 
-          // ip
-          // $("#ip_button").text("Your IP: "+userip); 
-
-          // $.getJSON('http://ipinfo.io', function(data){
-          //   console.log(data)
-          //   $("#ip_button").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
-          //   $("#ip_button").click(function(){
-          //     window.location.href="http://maps.google.com/maps?q="+data["loc"];
-          //   })
-          // })
 
           //chat
           Smooch.on('ready', function(){
-            Smooch.open();
-            Smooch.sendMessage(userip);
-            Smooch.updateUser({
-                givenName: 'Updated',
-                surname: 'Name',
-            });
+            Smooch.sendMessage("Hi Bilal");
+
+            var ip = userip 
+            var city = "City"
+            var region = "Region"
+            var country = "Country"
+            $.getJSON('http://ipinfo.io', function(data){
+              //console.log(data)
+              //$("#chat").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
+              
+              city = data["city"]
+              region = data["region"]
+              country = data["country"]
+
+              $("#chat").click(function(){
+                window.location.href="http://maps.google.com/maps?q="+data["loc"];
+              })
+
+              Smooch.updateUser({
+                givenName: city+', '+country,
+                surname: userip,
+              });
+            })
+            
 
           });
 
