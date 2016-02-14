@@ -76,8 +76,7 @@
 
           //chat
           Smooch.on('ready', function(){
-            Smooch.sendMessage("Hi Bilal");
-
+          		
             var ip = userip 
             var city = "City"
             var region = "Region"
@@ -99,22 +98,14 @@
                 surname: userip,
             });
 
-            if ( $( ".sk-holder" ).length ) {
- 
-			    alert("exists");
-			 
-			} else{
-				console.log("nope");
-
-			}
-
+            
 
           });
 
           Smooch.init({
             appToken: '6xysum4913o3cfreb9rik8dyb',
             customText: {
-              headerText: 'Say Hi (anonymously)!',
+              headerText: 'Say Hi!',
               inputPlaceholder: 'Type a message...',
               sendButtonText: 'Send',
               introText: 'Come on, you do not have to be shy,<br/> Ask me anything!',
@@ -123,14 +114,7 @@
           });
 
           
-			if ( $( ".sk-holder" ).length ) {
- 
-			    alert("exists");
-			 
-			} else{
-				console.log("nope2");
-
-			}
+			
          
 
 
