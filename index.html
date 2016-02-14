@@ -92,10 +92,24 @@
           //chat
           Smooch.on('ready', function(){
 
-           
+            var ip = userip 
+            var city = "?"
+            var region = "?"
+            var country = "?"
+            $.getJSON('http://ipinfo.io/'+userip, function(data){
+              //console.log(data)
+              //$("#chat").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
+              
+              city = data["city"]
+              region = data["region"]
+              country = data["country"]
+              
+            });
+
+
 
             Smooch.updateUser({
-                givenName: GetIpInfo(userip).city+', '+GetIpInfo(userip).country,
+                givenName: city+', '+country,
                 surname: userip,
             });
 
