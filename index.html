@@ -76,12 +76,12 @@
 
           //chat
           Smooch.on('ready', function(){
-          		
+
             var ip = userip 
             var city = "City"
             var region = "Region"
             var country = "Country"
-            $.getJSON('http://ipinfo.io', function(data){
+            $.getJSON('http://ipinfo.io/'+userip, function(data){
               //console.log(data)
               //$("#chat").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?"); 
               
