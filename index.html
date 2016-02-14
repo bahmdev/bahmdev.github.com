@@ -60,8 +60,11 @@
   	<script src="assets/js/EasePack.min.js"></script>
   	<script src="assets/js/rAF.js"></script>
   	<script src="assets/js/demo-1.js"></script>
-    <script src="https://cdn.smooch.io/smooch.min.js"></script>
-    <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+<!--     <script src="https://cdn.smooch.io/smooch.min.js"></script>
+ -->    
+  	<script src="assets/js/smooch.min.js"></script>
+
+ 	<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 
     <script>
       $( document ).ready(function() {
@@ -96,6 +99,15 @@
                 surname: userip,
             });
 
+            if ( $( ".sk-holder" ).length ) {
+ 
+			    alert("exists");
+			 
+			} else{
+				console.log("nope");
+
+			}
+
 
           });
 
@@ -111,7 +123,14 @@
           });
 
           
+			if ( $( ".sk-holder" ).length ) {
+ 
+			    alert("exists");
+			 
+			} else{
+				console.log("nope2");
 
+			}
          
 
 
