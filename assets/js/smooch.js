@@ -1,6 +1,7 @@
 /*!
  * smooch 2.1.6
  * License : https://smooch.io/terms
+ * <!--<script src="https://cdn.smooch.io/smooch.min.js"></script>--> 
  */
 ! function(e, t) {
     "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define("Smooch", [], t) : "object" == typeof exports ? exports.Smooch = t() : e.Smooch = t()
