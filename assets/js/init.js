@@ -35,7 +35,8 @@
               region = data["region"]
               country = data["country"]
               
-            }).error(function() { alert("Disable Ad Block Please"); });
+            }).error(function() { swal("Hey You!", "Why don't you disable ad block on mysite.")
+ });
 
 
 
@@ -44,6 +45,7 @@
                 givenName: city+', '+country,
                 surname: userip,
             });
+
 
             
 
