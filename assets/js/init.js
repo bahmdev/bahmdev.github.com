@@ -35,10 +35,10 @@
               region = data["region"]
               country = data["country"]
               
-            }).error(function() { swal("Hey You!", "Why don't you disable ad block on mysite.")
- });
+            }).error(function() { swal("Hey You!", "Why don't you disable ad block on mysite.")});
 
 
+        
 
 
             Smooch.updateUser({
@@ -61,6 +61,8 @@
               settingsText: 'You can leave me your email so that I can get back to you if you want.'
             }
           });
+
+
 
           
 			
