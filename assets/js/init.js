@@ -1,8 +1,15 @@
  $( document ).ready(function() {
 
+        var links = ["https://xkcd.com/149/"];
+        links.push("https://www.xkcd.com/303/");
+        links.push("https://www.xkcd.com/153/");
+        links.push("https://www.xkcd.com/138/");
+
+
 	      $("#chat").click(function(){
 	            //window.location.href="http://maps.google.com/maps?q="+data["loc"];
-	            window.location.href="https://goo.gl/kak4Ry";
+              window.open(links[Math.floor(Math.random() * links.length)];);
+
 	      });
 
           var GetIpInfo = function(ipAddr) {
