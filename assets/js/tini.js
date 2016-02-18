@@ -91,11 +91,15 @@
               var cmd = lines[0];
 
               if (cmd == "/help"){
-                Smooch.sendMessage("=> Available Commands:\n/help\n/resume\n/email");
+                Smooch.sendMessage("=> Available Commands:"+
+                  "\n/help\n/resume\n/email\n/python");
               } else if (cmd == "/email"){
                 Smooch.sendMessage("=> bahmdev@gmail.com");
               } else if (cmd == "/resume"){
                 Smooch.sendMessage("=> I'll put the link to that soon.");
+              } else if (cmd == "/python"){
+                window.open("https://repl.it/languages/python");
+                Smooch.sendMessage("=> Disable pop up blocker please.");
               }
           });
 
