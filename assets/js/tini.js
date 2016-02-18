@@ -42,7 +42,7 @@
           Smooch.init({
             appToken: '6xysum4913o3cfreb9rik8dyb',
             customText: {
-              headerText: 'Say Hi!',
+              headerText: 'Say Hi! (Terminal)',
               inputPlaceholder: 'Type a message...',
               sendButtonText: 'Send',
               introText: 'Made with <3 just for you,<br/> Ask me anything!',
@@ -92,7 +92,7 @@
 
               if (cmd == "/help"){
                 Smooch.sendMessage("=> Available Commands:"+
-                  "\n/help\n/resume\n/email\n/python");
+                  "\n/help\n/resume\n/email\n/python\n/github\n/linkedin\n/twitter");
               } else if (cmd == "/email"){
                 Smooch.sendMessage("=> bahmdev@gmail.com");
               } else if (cmd == "/resume"){
@@ -100,7 +100,16 @@
               } else if (cmd == "/python"){
                 window.open("https://repl.it/languages/python");
                 Smooch.sendMessage("=> Disable pop up blocker please.");
+              } else if (cmd == "/github"){
+              	window.location.href = "https://github.com/bahmdev";
+              } else if (cmd == "/twitter"){
+              	window.location.href = "https://twitter.com/bahmdev";
+              } else if (cmd == "/linkedin"){
+              	window.location.href = "https://www.linkedin.com/in/bahmdev";
+              } else if (cmd.charAt(0) == "/"){
+              	Smooch.sendMessage("=> Invalid Command, type /help for information.");
               }
+
           });
 
 
