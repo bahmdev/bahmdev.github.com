@@ -14864,7 +14864,7 @@
                         }, f["default"].createElement("a", {
                             href: "",
                             target: "_blank"
-                        }, f["default"].createElement("span", null, "Made with love"), " ", f["default"].createElement("span", null, "just for you"), " ", f["default"].createElement("div", {
+                        }, f["default"].createElement("span", null, "Type /help for Help"), " ", f["default"].createElement("span", null, "just for you"), " ", f["default"].createElement("div", {
                             className: ""
                         })))))
                     }, t
