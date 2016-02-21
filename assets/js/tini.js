@@ -137,18 +137,20 @@ $( document ).ready(function() {
                 audio.pause();
         } else if (cmd == "/location") {
             function showPosition(position) {
-                Smooch.sendMessage("=> Your location is "+position.coords.latitude+ ", "+position.coords.longitude);
                 //Smooch.sendMessage("=> My location is 43.661471, -70.2553259");
-                var d = getDistanceFromLatLonInKm(position.coords.latitude, position.coords.longitude,
+                var km = getDistanceFromLatLonInKm(position.coords.latitude, position.coords.longitude,
                                                                                                 43.661471, -70.2553259);
-                d = Math.round(d * 100) / 100;
-                Smooch.sendMessage("=> We are "+d+"km / "+(d*0.621)+" mi apart.");
+                var mi = Math.round(km * 0.621 * 100) / 100;
+                km = Math.round(km * 100) / 100;
+
+                var link = "http://maps.google.com/maps?q="+position.coords.latitude+ ","+position.coords.longitude;
+                Smooch.sendMessage("=> We are "+km+"km / "+mi+"mi apart.\n"+link);
 
             }
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
             } else {
-                Smooch.sendMessage("=> My location can't be shared with you.");
+                Smooch.sendMessage("=> Turn on your location first please.");
             }
 
         } else if (cmd.charAt(0) == "/"){
