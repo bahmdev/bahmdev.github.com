@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    var audio = new Audio("assets/media/music.mp3");
+    audio.loop = true;
     var links = ["https://xkcd.com/149/"];
     links.push("https://www.xkcd.com/303/");
     links.push("https://www.xkcd.com/153/");
@@ -90,22 +92,32 @@ $( document ).ready(function() {
         var lines = rspns.split(" ");
         var cmd = lines[0];
 
-        if (cmd == "/help"){
-            Smooch.sendMessage("=> Available Commands:"+
-                "\n/help\n/resume\n/email\n/python\n/github\n/linkedin\n/twitter");
-        } else if (cmd == "/email"){
+        if (cmd == "/help") {
+            Smooch.sendMessage("=> Available Commands:" +
+                "\n/help\n/resume\n/email\n/python\n/github\n/twitter\n/linkedin\n/togglemusic");
+        } else if (cmd == "/email") {
             Smooch.sendMessage("=> bahmdev@gmail.com");
-        } else if (cmd == "/resume"){
+        } else if (cmd == "/resume") {
             Smooch.sendMessage("=> I'll put the link to that soon.");
-        } else if (cmd == "/python"){
+        } else if (cmd == "/python") {
             window.open("https://repl.it/languages/python");
-            Smooch.sendMessage("=> Disable pop up blocker please.");
-        } else if (cmd == "/github"){
+            Smooch.sendMessage("=> Disable pop up blocker please if it didn't work");
+        } else if (cmd == "/github") {
             window.location.href = "https://github.com/bahmdev";
-        } else if (cmd == "/twitter"){
+        } else if (cmd == "/twitter") {
             window.location.href = "https://twitter.com/bahmdev";
-        } else if (cmd == "/linkedin"){
+        } else if (cmd == "/linkedin") {
             window.location.href = "https://www.linkedin.com/in/bahmdev";
+        } else if (cmd == "/togglemusic") {
+            if (audio.paused) {
+
+                if (lines.length > 1)
+                    audio.playbackRate = lines[1];
+
+                audio.play();
+            }
+            else
+                audio.pause();
         } else if (cmd.charAt(0) == "/"){
             Smooch.sendMessage("=> Invalid Command, type /help for information.");
         }
