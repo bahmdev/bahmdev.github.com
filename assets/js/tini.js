@@ -352,6 +352,12 @@ $( document ).ready(function() {
     });
 
 
+    audioTag.addEventListener('ended', function() {
+        circle_scale = 1;
+        visibility_rate = 1;
+    });
+
+
 
     function playMusic(song){
 
