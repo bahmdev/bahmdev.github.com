@@ -264,7 +264,7 @@ $( document ).ready(function() {
         h+=s; while (h>=360.0) h-=360.0; while (h<0.0) h+=360.0; return h;
     }
 
-    //min max via Hairgami_Master (see comments)
+    //min max via Hairgami_Master
     function min3(a,b,c) {
         return (a<b)?((a<c)?a:c):((b<c)?b:c);
     }
