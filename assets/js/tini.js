@@ -495,7 +495,7 @@ $( document ).ready(function() {
         } else if (cmd == "/email") {
             Smooch.sendMessage("=> bahmdev@gmail.com");
         } else if (cmd == "/resume") {
-            Smooch.sendMessage("=> I'll put the link to that soon.");
+            window.open("/assets/other/b_a_resume.pdf");
         } else if (cmd == "/python") {
             window.open("https://repl.it/languages/python");
             Smooch.sendMessage("=> Disable pop up blocker please if it didn't work");
