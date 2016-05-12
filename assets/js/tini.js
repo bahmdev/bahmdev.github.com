@@ -293,7 +293,7 @@ $( document ).ready(function() {
     $("#chat").click(function(){
         //window.location.href="http://maps.google.com/maps?q="+data["loc"];
         //window.open(links[Math.floor(Math.random() * links.length)]);
-        window.open(https://github.com/bahmdev/);
+        window.open("https://github.com/bahmdev/");
 
     });
 
