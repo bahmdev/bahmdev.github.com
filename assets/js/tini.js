@@ -288,9 +288,6 @@ $( document ).ready(function() {
     links.push("https://www.xkcd.com/303/");
     links.push("https://www.xkcd.com/153/");
     links.push("https://www.xkcd.com/138/");
-    links.push("https://www.youtube.com/watch?v=pEsZkTTgydc");
-    links.push("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    links.push("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     links.push("https://github.com/NARKOZ/hacker-scripts");
 
     $("#chat").click(function(){
